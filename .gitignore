@@ -2,3 +2,8 @@
 db/*.sqlite3
 log/*.log
 tmp/
+
+# don't use pages for now
+app/controllers/pages_controller.rb
+app/views/pages/
+app/helpers/pages_helper.rb

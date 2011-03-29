@@ -1,4 +1,14 @@
 FirstApp::Application.routes.draw do
+  resources :tags
+  resources :images
+   
+  # root index allows you to create a new image to tag
+  root :to => 'images#new'
+  
+  #match '/', :to => 'pages#home'
+  #match '/readit', :to => 'pages#readIt'
+  #match"/fetch", :to => "pages#fetch"
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

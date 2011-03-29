@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Content:</b>
+  <%= @tag.content %>
+</p>
+
+<p>
+  <b>Xpos:</b>
+  <%= @tag.xpos %>
+</p>
+
+<p>
+  <b>Ypos:</b>
+  <%= @tag.ypos %>
+</p>
+
+<p>
+  <b>Image:</b>
+  <%= @tag.image_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %>

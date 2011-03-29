@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FirstApp</title>
+  <title><%= @title %></title>
   <%= stylesheet_link_tag :all %>
-  <%= javascript_include_tag :defaults %>
+ <%= javascript_include_tag 'jquery-1.5.1.min', 'application' %>
   <%= csrf_meta_tag %>
+
 </head>
-<body>
+<body class="full-width big-margin-top bg-blue">
+<div id="header" class="bg-white med-font">
+<h1 class="big-font"><b>Hello1000</b> lets you tag images.</h1>
 
+<%= link_to 'Add a new image', new_image_path %> or
+<%= link_to 'list all images', images_path %>.
+</div>
+
+<div id="content" class="big-margin-top">
 <%= yield %>
-
+</div>
 </body>
 </html>

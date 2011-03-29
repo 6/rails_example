@@ -1,0 +1,26 @@
+<p id="notice"><%= notice %></p>
+
+<script type="text/javascript" src="/javascripts/imagetagger.js"></script>
+<script type="text/javascript">
+var image_id = <%= @image.id %>;
+ajaxCreatePath = '<%= tags_path %>';
+ajaxDeletePath = '<%= tags_path %>/'; // append tagId to end
+</script>
+
+<h1 class="med-font">Click the image anywhere to tag it</h1>
+<%= link_to 'Permalink', image_path(@image) %> |
+<%= link_to 'Edit image info', edit_image_path(@image) %><br><br>
+    <!-- TODO: better image resizing -->
+  <img class="taggable" src="<%= @image.url %>" alt="image is loading..." style="width: 600px; height: 420px;">
+<br>
+<% if @image.tags.empty? %>
+    <span class="removeWhenTagged">No tags yet.</span>
+<% else %>
+    <script type="text/javascript">
+    $(document).ready(function() {
+        <% @image.tags.each do |tag| %>
+            addTag("<%= tag.content %>", tagCounter, <%= tag.xpos %>, <%= tag.ypos %>, <%= tag.id %> );
+        <% end %>
+    });
+    </script>
+<% end %>

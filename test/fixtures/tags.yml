@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  content: MyString
+  xpos: 1
+  ypos: 1
+  image_id: 1
+
+two:
+  content: MyString
+  xpos: 1
+  ypos: 1
+  image_id: 1

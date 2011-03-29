@@ -1,0 +1,10 @@
+<h2 class="med-font">Showing all tagged images</h2>
+
+<table>
+<% @images.each do |image| %>
+  <tr>
+    <td><%= link_to image.url, image %></td>
+    <td><%= link_to 'Edit', edit_image_path(image) %></td>
+  </tr>
+<% end %>
+</table>
